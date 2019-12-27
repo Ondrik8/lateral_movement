@@ -2,7 +2,7 @@
 
 *расширяемся по (нашей наверное) сети !
  
-для этого есть прeкрасный [инструмент](https://github.com/SpiderLabs/SCShell)
+для этого есть прeкрасный [инструмент](https://github.com/Ondrik8/lateral_movement/blob/master/SCShell-master.zip)
 
 Шаг 1: Получите текущее pathName вашей целевой службы, чтобы мы могли восстановить его после запуска нашей команды (в нашем случае XblAuthManager)
 
