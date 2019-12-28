@@ -1,5 +1,8 @@
 ## Двигаемся боком 
 
+[что это и для чего](https://posts.specterops.io/offensive-lateral-movement-1744ae62b14f) и [основные приемы и трюки](https://habr.com/ru/post/439026/).
+
+
 *расширяемся по (нашей "наверное") сети !
  
 для этого есть прeкрасный [инструмент](https://github.com/Ondrik8/lateral_movement/blob/master/SCShell-master.zip)
