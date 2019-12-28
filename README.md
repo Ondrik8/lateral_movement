@@ -102,6 +102,11 @@
 - это инструмент без каких-либо усилий, способный извлекать учетные данные на машинах Windows и в больших средах Active Directory.
 
 
+### [capture_ NTLM_hash](https://0xdf.gitlab.io/2019/01/13/getting-net-ntlm-hases-from-windows.html)
 
 
+### [ProcDump](https://docs.microsoft.com/en-us/sysinternals/downloads/procdump) 
+используется для извлечения дампа LSASS, который позже перемещается на автономный компьютер с Windows 10 и [анализируется](https://medium.com/@ali.bawazeeer/using-mimikatz-to-get-cleartext-password-from-offline-memory-dump-76ed09fd3330) с помощью Mimikatz . Это по-прежнему эффективный метод извлечения учетных данных из Windows 10, поскольку ProcDump является двоичным файлом Microsoft и по этому всем антивирусам на него пох... чо радует)))
+
+Пдробно: [TYT](https://null-byte.wonderhowto.com/how-to/hacking-windows-10-dump-ntlm-hashes-crack-windows-passwords-0198268/)
 
