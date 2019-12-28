@@ -86,3 +86,12 @@
 
 
 ```
+
+
+
+### [PSexec](https://windowsnotes.ru/cmd/psexec-utilita-dlya-udalennogo-vypolneniya-komand/)
+
+[usage](http://winitpro.ru/index.php/2010/09/22/utilita-psexec-i-udalennoe-upravlenie-sistemami/)
+
+
+
