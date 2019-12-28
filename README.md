@@ -98,4 +98,10 @@
 [пошаговое руководство](http://blog.redxorblue.com/2019/12/no-shells-required-using-impacket-to.html) по использованию Impacket и Kerberos для делегирования вашего пути к DA
 
 
+### [Spraykatz](https://github.com/aas-n/spraykatz)
+- это инструмент без каких-либо усилий, способный извлекать учетные данные на машинах Windows и в больших средах Active Directory.
+
+
+
+
 
