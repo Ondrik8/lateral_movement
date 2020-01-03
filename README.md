@@ -214,11 +214,11 @@ SharpCradle is a tool designed to help penetration testers or red teams download
 
 #### Инструменты:
 
-Responder: https://github.com/lgandx/Responder
-[Impacket] ntlmrelayx.py: https://github.com/CoreSecurity/impacket/blob/master/examples/ntlmrelayx.py
-[Responder] MultiRelay.py: https://github.com/lgandx/Responder/blob/master/tools/MultiRelay.py
-[Responder] RunFinger.py: https://github.com/lgandx/Responder/blob/master/tools/RunFinger.py
-CrackMapExec: https://github.com/byt3bl33d3r/CrackMapExec.git
+[Responder](https://github.com/lgandx/Responder)
+[ntlmrelayx.py](https://github.com/CoreSecurity/impacket/blob/master/examples/ntlmrelayx.py) 
+[MultiRelay.py](https://github.com/lgandx/Responder/blob/master/tools/MultiRelay.py)
+[RunFinger.py](https://github.com/lgandx/Responder/blob/master/tools/RunFinger.py)
+[CrackMapExec](https://github.com/byt3bl33d3r/CrackMapExec.git)
 
 #### Demo
 https://byt3bl33d3r.github.io/practical-guide-to-ntlm-relaying-in-2017-aka-getting-a-foothold-in-under-5-minutes.html
