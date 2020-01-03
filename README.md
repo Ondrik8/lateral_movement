@@ -220,6 +220,11 @@ Responder: https://github.com/lgandx/Responder
 [Responder] RunFinger.py: https://github.com/lgandx/Responder/blob/master/tools/RunFinger.py
 CrackMapExec: https://github.com/byt3bl33d3r/CrackMapExec.git
 
+#### Demo
+https://byt3bl33d3r.github.io/practical-guide-to-ntlm-relaying-in-2017-aka-getting-a-foothold-in-under-5-minutes.html
+
+https://youtu.be/f9oMVoc2Umc
+
 #### [PivotSuite]https://github.com/FlatL1neAPT/PivotSuite
 
 Ключевая особенность:
