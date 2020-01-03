@@ -1,4 +1,4 @@
-## Двигаемся боком 
+## lateral movement или Горизонтально-боковое движение
 
 [что это и для чего](https://posts.specterops.io/offensive-lateral-movement-1744ae62b14f) и [основные приемы и трюки](https://habr.com/ru/post/439026/).
 
