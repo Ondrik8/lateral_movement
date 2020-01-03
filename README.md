@@ -212,3 +212,31 @@ PowerShell and Cobalt Strike scripts for lateral movement using Excel 4.0 / XLM 
 SharpCradle is a tool designed to help penetration testers or red teams download and execute .NET binaries into memory.
 
 
+#### Инструменты:
+
+Responder: https://github.com/lgandx/Responder
+[Impacket] ntlmrelayx.py: https://github.com/CoreSecurity/impacket/blob/master/examples/ntlmrelayx.py
+[Responder] MultiRelay.py: https://github.com/lgandx/Responder/blob/master/tools/MultiRelay.py
+[Responder] RunFinger.py: https://github.com/lgandx/Responder/blob/master/tools/RunFinger.py
+CrackMapExec: https://github.com/byt3bl33d3r/CrackMapExec.git
+
+#### [PivotSuite]https://github.com/FlatL1neAPT/PivotSuite
+
+Ключевая особенность:
+Поддерживается прямое и обратное туннелирование TCP
+Поддерживается прямой и обратный socks5 прокси-сервер
+Поддержка протокола UDP через TCP и TCP через TCP
+Поддержка корпоративной прокси-аутентификации (NTLM)
+Встроенная функциональность перечисления в сети, например Обнаружение хоста, сканирование портов, выполнение команд ОС
+PivotSuite позволяет получить доступ к разным взломанным хостам и их сети одновременно (действует как C & C Server)
+Одиночное вращение, двойное вращение и многоуровневое вращение могут выполняться с помощью PivotSuite.
+PivotSuite также работает как динамическая переадресация портов SSH, но в обратном направлении.
+
+Преимущество перед другими инструментами:
+Не требуется доступ администратора / root на взломанном хосте
+PivotSuite также работает, когда взломанный хост находится за межсетевым экраном / NAT, когда разрешено только обратное соединение.
+Нет зависимости, кроме стандартных библиотек Python.
+Установка не требуется
+Порт UDP доступен через TCP
+
+
