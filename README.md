@@ -373,8 +373,11 @@ ls \\ ops-sqlsrvone.lethallab.local \ C $
 
 Удаленное выполнение команд и соответствующие порты:
    IPC $ + AT 445
+   
    PSEXEC 445
+   
    WMI 135
+   
    Winrm 5985 (HTTP) и 5986 (HTTPS)
 
 1. WMI выполнить командный режим, без эха:
