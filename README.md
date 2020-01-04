@@ -452,3 +452,6 @@ sc \\192.168.17.138 create test binpath= "c:\test.exe"
 sc \\192.168.17.138 start test
 sc \\192.168.17.138 del test
 ```
+
+
+[lateral-movement-using-internetexplorer-application-object-com](https://homjxi0e.wordpress.com/2018/02/15/lateral-movement-using-internetexplorer-application-object-com/)
