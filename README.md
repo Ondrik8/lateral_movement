@@ -1,5 +1,9 @@
 ## lateral movement или Горизонтально-боковое движение
 
+#### Links
+
+https://github.com/Mr-Un1k0d3r/PoisonHandler
+
 [что это и для чего](https://posts.specterops.io/offensive-lateral-movement-1744ae62b14f) и [основные приемы и трюки](https://habr.com/ru/post/439026/).
 
 
