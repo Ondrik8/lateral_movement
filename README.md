@@ -1,5 +1,7 @@
 ## lateral movement или Горизонтально-боковое движение
 
+[NTLM Relay, Token Impersonation, Pass the Hash, PsExec, and more](https://www.youtube.com/watch?v=QvMeLoyS944)
+
 #### Links
 
 https://github.com/Mr-Un1k0d3r/PoisonHandler
