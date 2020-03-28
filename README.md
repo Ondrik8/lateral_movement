@@ -1,6 +1,6 @@
 ## lateral movement или Горизонтально-боковое движение
 
-[NTLM Relay, Token Impersonation, Pass the Hash, PsExec, and more](https://www.youtube.com/watch?v=QvMeLoyS944)
+[NTLM Relay, Token Impersonation, Pass the Hash, PsExec, and more](https://www.youtube.com/watch?v=QvMeLoy)
 
 #### Links
 
