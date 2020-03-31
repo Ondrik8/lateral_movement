@@ -2,6 +2,8 @@
 
 [NTLM Relay, Token Impersonation, Pass the Hash, PsExec, and more](https://youtu.be/QvMeLoyS944)
 
+!!! https://www.offensive-security.com/metasploit-unleashed/fun-incognito/
+
 #### Links
 
 https://riccardoancarani.github.io/2019-10-04-lateral-movement-megaprimer/
