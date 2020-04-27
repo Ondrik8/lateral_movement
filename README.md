@@ -1,5 +1,8 @@
 ## lateral movement или Горизонтально-боковое движение
 
+
+#### [Pivoting](https://www.youtube.com/watch?v=X-SpccxCPUA)
+
 [NTLM Relay, Token Impersonation, Pass the Hash, PsExec, and more](https://youtu.be/QvMeLoyS944)
 
 !!! https://www.offensive-security.com/metasploit-unleashed/fun-incognito/
