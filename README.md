@@ -1,5 +1,8 @@
 ## lateral movement или Горизонтально-боковое движение
 
+![Just Walking The Dog](https://github.com/buftas/Active-Directory-Exploitation-Cheatsheet/blob/master/WalkTheDog.png)
+
+
 
 #### [Pivoting](https://www.youtube.com/watch?v=X-SpccxCPUA)
 
