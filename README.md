@@ -1,6 +1,6 @@
 ## lateral movement или Горизонтально-боковое движение
 
-![Just Walking The Dog](https://github.com/buftas/Active-Directory-Exploitation-Cheatsheet/blob/master/WalkTheDog.png)
+![Just Walking The Dog](/WalkTheDog.png)
 
 
 
