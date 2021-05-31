@@ -1,5 +1,8 @@
 ## lateral movement или Горизонтально-боковое движение
 
+
+## [A-Red-Teamer-notes](https://github.com/ihebski/A-Red-Teamer-diaries)
+
 ![Just Walking The Dog](/WalkTheDog.png)
 
 ### [Active Directory Attack](https://github.com/swisskyrepo/PayloadsAllTheThings/blob/master/Methodology%20and%20Resources/Active%20Directory%20Attack.md)
