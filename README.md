@@ -1,7 +1,7 @@
 ## lateral movement или Горизонтально-боковое движение
 
-
-
+https://www.praetorian.com/blog/how-to-exploit-active-directory-acl-attack-paths-through-ldap-relaying-attacks/
+https://zer1t0.gitlab.io/posts/attacking_ad/
 
 ![Just Walking The Dog](/WalkTheDog.png)
 
