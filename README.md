@@ -22,6 +22,7 @@
 
 https://www.praetorian.com/blog/how-to-exploit-active-directory-acl-attack-paths-through-ldap-relaying-attacks/
 https://zer1t0.gitlab.io/posts/attacking_ad/
+https://casvancooten.com/posts/2020/11/windows-active-directory-exploitation-cheat-sheet-and-command-reference/
 
 ![scheme](https://1.bp.blogspot.com/-gR0b35GTLaY/YKr7ph2EjDI/AAAAAAAAWS4/tYB1rCSHbk0cPqPzCpdwZbDxZYsLapsuACNcBGAsYHQ/s1349/CheeseTools_1_CheesePS.png)
 ### [CheeseTools](https://github.com/klezVirus/CheeseTools)
